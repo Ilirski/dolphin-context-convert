@@ -16,7 +16,7 @@ Right-click to convert audio/video/images in KDE Plasma. Uses FFmpeg. I only dea
 
 ## Use
 
-Right-click file in Dolphin -> Choose format. Can converet video to mp3 as a bonus
+Right-click file in Dolphin -> Choose format. Can convret video to mp3 as a bonus
 
 ## Formats
 
