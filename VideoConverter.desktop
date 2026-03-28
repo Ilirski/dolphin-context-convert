@@ -2,7 +2,8 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=video/*;
-Actions=ConvertToMP4;ConvertToAVI;ConvertToMOV;ConvertToMKV;ConvertToWMV;ConvertToFLV;ConvertToMPG;ConvertToMP3;ConvertToOGV;ConvertToWebM;
+X-KDE-Priority=TopLevel
+Actions=ConvertToMP4;ConvertToMP4Resolve;ConvertToAVI;ConvertToMOV;ConvertToMKV;ConvertToWMV;ConvertToFLV;ConvertToMPG;ConvertToMP3;ConvertToOGV;ConvertToWebM;ConvertToGIF;RemuxToMP4;RemuxToMKV;
 X-KDE-Submenu=Convert Video
 Icon=video-x-generic
 X-KDE-StartupNotify=false
@@ -10,6 +11,11 @@ X-KDE-StartupNotify=false
 [Desktop Action ConvertToMP4]
 Name=Convert to MP4
 Exec=~/Scripts/ffmpegconvert.sh %U mp4 video
+Icon=video-mp4
+
+[Desktop Action ConvertToMP4Resolve]
+Name=Convert to MP4 (Davinci Resolve)
+Exec=~/Scripts/ffmpegconvert.sh %U resolve mp4 video
 Icon=video-mp4
 
 [Desktop Action ConvertToAVI]
@@ -54,5 +60,20 @@ Icon=video-webm
 
 [Desktop Action ConvertToMP3]
 Name=Convert to MP3
-Exec=~/Scripts/ffmpegconvert.sh %U mp3 video
+Exec=~/Scripts/ffmpegconvert.sh %U mp3 audio
 Icon=audio-mp3
+
+[Desktop Action ConvertToGIF]
+Name=Convert to GIF
+Exec=~/Scripts/ffmpegconvert.sh %U gif video
+Icon=image-gif
+
+[Desktop Action RemuxToMP4]
+Name=Remux to MP4 (no re-encode)
+Exec=~/Scripts/ffmpegconvert.sh %U mp4 remux
+Icon=video-mp4
+
+[Desktop Action RemuxToMKV]
+Name=Remux to MKV (no re-encode)
+Exec=~/Scripts/ffmpegconvert.sh %U mkv remux
+Icon=video-x-matroska

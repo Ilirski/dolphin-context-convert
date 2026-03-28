@@ -2,7 +2,8 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=audio/*;
-Actions=ConvertToMP3;ConvertToAAC;ConvertToOGG;ConvertToWMA;ConvertToFLAC;ConvertToM4A;ConvertToALAC;ConvertToWAV;ConvertToAIFF;
+X-KDE-Priority=TopLevel
+Actions=ConvertToMP3;ConvertToAAC;ConvertToOGG;ConvertToWMA;ConvertToFLAC;ConvertToM4A;ConvertToALAC;ConvertToWAV;ConvertToAIFF;ConvertToOpus;
 X-KDE-Submenu=Convert Audio
 Icon=audio-x-generic
 X-KDE-StartupNotify=false
@@ -51,3 +52,8 @@ Icon=audio-x-wav
 Name=Convert to AIFF
 Exec=~/Scripts/ffmpegconvert.sh %U aiff audio
 Icon=audio-x-aiff
+
+[Desktop Action ConvertToOpus]
+Name=Convert to Opus
+Exec=~/Scripts/ffmpegconvert.sh %U opus audio
+Icon=audio-x-generic
